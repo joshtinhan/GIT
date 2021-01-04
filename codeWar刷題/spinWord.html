@@ -1,0 +1,18 @@
+<script>
+        function spinWords(phrase){
+                    let arr = phrase.split(' ');
+                    let str = '';
+                        for(let j=0;j<arr.length;j++){
+                            if(arr[j].length>4){
+                                for(let i=arr[j].length-1;i>=0;i--){
+                                        str += arr[j][i];
+                                }
+                            }else{
+                                str += arr[j];
+                            }
+                            str += ' ';
+                        }
+                    return str.trimRight();
+                    }
+
+</script>
