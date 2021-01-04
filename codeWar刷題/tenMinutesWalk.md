@@ -15,22 +15,22 @@ Note: you will always receive a valid array containing a random assortment of di
 ```JavaScript
     function isValidWalk(walk) {
         let countN = walk.filter(function (item,index,array) {
-            if(item == 'n'){
+            if(item == 'n'){//過濾成陣列裡都是n
                 return true;
             }
           })
         let countS = walk.filter(function (item,index,array) {
-        if(item == 's'){
+        if(item == 's'){//過濾成陣列裡都是s
             return true;
         }
         })
         let countE = walk.filter(function (item,index,array) {
-        if(item == 'e'){
+        if(item == 'e'){//過濾成陣列裡都是e
             return true;
         }
         })
         let countW = walk.filter(function (item,index,array) {
-        if(item == 'w'){
+        if(item == 'w'){//過濾成陣列裡都是w
             return true;
         }
         })

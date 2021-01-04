@@ -17,18 +17,18 @@ Examples: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" sp
 ## 解答
 ```JavaScript
     function spinWords(phrase){
-        let arr = phrase.split(' ');
-        let str = '';
+        let arr = phrase.split(' ');//先將字串變成以空格隔開的陣列
+        let str = '';//令str為空字串
             for(let j=0;j<arr.length;j++){
-                if(arr[j].length>4){
-                    for(let i=arr[j].length-1;i>=0;i--){
+                if(arr[j].length>4){//如果句子中第j個單字的字元長度大於4個
+                    for(let i=arr[j].length-1;i>=0;i--){//用i--的方式將單字倒過來
                             str += arr[j][i];
                     }
-                }else{
-                    str += arr[j];
+                }else{//如果句子中的第j個單字的字元長度小於等於4個
+                    str += arr[j];//維持原樣
                 }
-                str += ' ';
+                str += ' ';//給每個字加一個空格
             }
-        return str.trimRight();
+        return str.trimRight();//去除最後一個字的空格
      }
 ```
