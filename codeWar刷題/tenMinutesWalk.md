@@ -4,15 +4,15 @@ You live in the city of Cartesia where all roads are laid out in a perfect grid.
 Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
 
 ## 需符合測試
-    ```JavaScript
+```JavaScript
         //some test cases for you...
         Test.expect(isValidWalk(['n','s','n','s','n','s','n','s','n','s']), 'should return true');
         Test.expect(!isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']), 'should return false');
         Test.expect(!isValidWalk(['w']), 'should return false');
         Test.expect(!isValidWalk(['n','n','n','s','n','s','n','s','n','s']), 'should return false');
-    ```
+```
 ## 解答
-    ```JavaScript
+```JavaScript
     function isValidWalk(walk) {
         let countN = walk.filter(function (item,index,array) {
             if(item == 'n'){
@@ -36,5 +36,5 @@ Note: you will always receive a valid array containing a random assortment of di
         })
         return(Boolean(countN.length == countS.length && countE.length == countW.length && countN.length < 6 && countE.length < 6));
     }
-    ```
+```
 
