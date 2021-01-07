@@ -19,10 +19,13 @@ The string has a length greater or equal to one and contains only letters from a
 ## 解答
 ```JavaScript
     function printerError(s) {
+        //把輸入字串按每個字拆成陣列
         let originalArr = s.split("");
         let basic = "abcdefghijklm";
+        //正確的字串為a-m，一樣拆成陣列
         let correctArr = basic.split("");
         let errorArr = originalArr.filter((item,index)=>{
+            //把correctArr陣列裡沒有的字母列出來
             return correctArr.indexOf(item) == -1;
         })
         return errorArr.length+"/"+originalArr.length;
@@ -36,10 +39,13 @@ The string has a length greater or equal to one and contains only letters from a
     let errorArr = originalArr.filter((item,index)=>{
         return correctArr.indexOf(item) == -1;
     })
+    //用reduce函數，accumulator的initialValue為{}
     let sort = errorArr.reduce((accumulator, currentValue)=>{
+        //如果已經存在accumulator[currentValue]，則值+1
         if(accumulator[currentValue]){
             accumulator[currentValue]++;
         }
+        //loop第一次出現的字母都會進else迴圈
         else{
             accumulator[currentValue] = 1;
         }

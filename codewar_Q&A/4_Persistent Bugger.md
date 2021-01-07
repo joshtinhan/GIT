@@ -23,7 +23,7 @@ describe('Initial Tests', function () {
 ## 解答
 ```JavaScript
     function persistence(num) {
-    function digits(num) { //取幾位數
+        function digits(num) { //取幾位數
             return Math.floor(Math.log10(num));
         }
         function denominator(n) { //做為分母

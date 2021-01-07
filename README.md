@@ -1,1 +1,3 @@
 # 緩慢新增中...
+Codewar刷題在 /codewar_Q&A
+JavaScript筆記在 /JS_note
